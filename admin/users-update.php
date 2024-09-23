@@ -36,8 +36,6 @@ if (isset($_POST['submit'])) {
 
                     <div class="card-body shadow-sm">
                         <form action="" method="POST">
-                        <div class="card-body shadow-sm">
-                        <form action="" method="POST">
                             <input type="hidden" name="id_user" value="<?= $users['id_user']; ?>">
                             <div class="mb-3">
                                 <label for="username">Username</label>
