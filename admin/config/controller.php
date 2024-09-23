@@ -155,7 +155,7 @@ function update_users($data)
     $id_user = (int)$data['id_user'];
     $username = sanitize($data['username']);
     $email = sanitize($data['email']);
-    $password = sanitize(($data['password']));
+    $password = sanitize(password_hash($data['password'], PASSWORD_DEFAULT));
 
     // query dengan prepare statement 
     $stmt = $db->prepare("UPDATE users SET username = ?, email = ?, password = ? WHERE id_user = ?");

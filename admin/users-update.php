@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 
                             <div class="mb-3">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" value="<?= $users['password'] ?>" required>
+                                <input type="password" class="form-control" id="password" name="password" value="" placeholder="isi password baru jika ingin mengganti" value="<?= $users['password'] ?>" required>
                             </div>
 
                             <div class="float-end">
