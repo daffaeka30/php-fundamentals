@@ -1,13 +1,15 @@
 <?php
 
-//if (!isset($_SESSION['login'])) {
- //   echo "<script> 
-   //         alert('Please login first');
-     //       document.location.href = 'login.php';
-       //   </script>";
+session_start();
 
-   // exit;
-//}
+if (!isset($_SESSION['login'])) {
+    echo "<script> 
+            alert('Please login first');
+            document.location.href = 'login.php';
+          </script>";
+
+    exit;
+}
 
 $title = "Film";
 require "layout/header.php";
