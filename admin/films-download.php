@@ -1,5 +1,17 @@
 <?php
 
+session_start();
+
+if (!isset($_SESSION['login'])) {
+    echo "<script> 
+            alert('Please login first');
+            document.location.href = 'login.php';
+          </script>";
+
+    exit;
+}
+
+
 require_once 'C:\Users\62813\vendor\autoload.php';
 require 'config/app.php';
 

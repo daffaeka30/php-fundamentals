@@ -59,7 +59,11 @@ if (isset($_POST['submit'])) {
                             </div>
 
                             <div class="float-end">
-                                <button type="submit" class="btn btn-primary" name="submit"><i class="bi bi-upload"></i> Submit</button>
+                                <a href="users.php" class="btn btn-danger"><i class="bi bi-x-circle"></i> Cancel</a>                  
+                            </div>
+
+                            <div class="float-end">
+                                <button type="submit" class="btn btn-primary me-3" name="submit"><i class="bi bi-upload"></i> Submit</button>
                             </div>
                         </form>
                     </div>
