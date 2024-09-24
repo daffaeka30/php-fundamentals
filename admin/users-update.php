@@ -1,5 +1,8 @@
 <?php
 
+$title = 'Update Users';
+require "layout/header.php";
+
 session_start();
 
 if (!isset($_SESSION['login'])) {
@@ -11,10 +14,16 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-$title = 'Update Users';
-require "layout/header.php";
-
 $id_user = (int)$_GET['id_user'];
+
+if ($id_user != $_SESSION['id_user'] && $_SESSION['role'] != 'admin') {
+    if ($_SESSION['role'] == 'operator' && $users['role'] != 'operator') {
+        echo "<script>
+                alert('Operator can only update their own account');
+                document.location.href = 'users.php';
+              </script>";
+    }
+}
 
 $users = select("SELECT * FROM users WHERE id_user = $id_user")[0];
 
